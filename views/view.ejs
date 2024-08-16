@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Data</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+        <h1>Id : <%= data.id %></h1>
+    <fieldset class="new">
+        <a class="edit" href="/records/<%= data.id %>/edit">&#9998</a><br>
+        <h2>Shershah College, Sasaram</h2><hr>
+        <h3><%= data.name %></h3><br>
+        <b>Father : </b><%= data.fname %> <br>
+        <b>DOB : </b><%= data.dob %> <br>
+        <b>Class : </b><%= data.classn %>&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>RollNo : </b><%= data.roll %> <br>
+        <b>Gen : </b><%= data.gen %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Blood : </b><%= data.blood %> <br>
+        <b>Address : </b><%= data.add %> <br>
+        <b>Contact : </b><%= data.phone %> <br><hr>
+        <center><b class="mail"><%= data.email %></b></center>
+    </fieldset>
+</body>
+</html>

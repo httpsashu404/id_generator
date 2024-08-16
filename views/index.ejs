@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Records</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>All Student Records</h1>
+    <button class="add"><a href="/records/new"> + New Student </a></button><br><br>
+    <table class="view" border="1">
+        <thead>
+            <th>Name</th>
+            <th>Father</th>
+            <th>Rollno</th>
+            <th>Class</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <% for(let std of data) {%>
+            <tr>
+                <td><%= std.name %></td>
+                <td><%= std.fname %></td>
+                <td><%= std.roll %></td>
+                <td><%= std.classn %></td>
+                <td><%= std.email %></td>
+                <td><%= std.phone %></td>
+                <td><%= std.add %></td>
+                <td>
+                    <button class="add"><a href="/records/<%= std.id %>">View</a></button>
+                    <button class="add"><a href="/records/<%= std.id %>/edit">Edit</a></button>
+                    <form action="/records/<%= std.id %>?_method=DELETE" method="post">
+                        <button class="add">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

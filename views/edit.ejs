@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Update Student Data</h1>
+    <fieldset class="new">
+        <legend><b>(Update Student)</b></legend>
+        <form action="/records/<%= data.id %>?_method=PUT" method="post" autocomplete="off">
+            <label for="name"><b>Name : </b></label>
+            <input class="input" type="text" id="name" name="name" value="<%= data.name %>" placeholder="Your fullName" value="<%= data.name %>" readonly><br><br>
+            <label for="fname"><b>Father : </b></label>
+            <input class="input" type="text" id="fname" name="fname" placeholder="Your fatherName" value="<%= data.fname %>" readonly><br><br>
+            <label for="mail"><b>E-mail : </b></label>
+            <input class="input" type="email" id="mail" name="email" placeholder="Your emailAddress" value="<%= data.email %>"><br><br>
+            <label for="clg"><b>Class : </b></label>
+            <input class="input" type="text" id="clg" name="classn" placeholder="Your className" value="<%= data.classn %>"><br><br>
+            <label for="roll"><b>Rollno : </b></label>
+            <input class="input" type="number" id="roll" name="roll" placeholder="Your rollNo" value="<%= data.roll %>"><br><br>
+            <label for="dob"><b>DOB : </b></label>
+            <input class="input" type="date" id="dob" name="dob" placeholder="Your dateOfBirth" value="<%= data.dob %>" readonly><br><br>
+            <label for="dob"><b>Contact : </b></label>
+            <input class="input" type="tel" id="tel" name="phone" maxlength="10" placeholder="Your phoneNumber" value="<%= data.phone %>"><br><br>
+            <label for="blood"><b>Blood : </b></label>
+            <input class="input" type="text" id="blood" name="blood" placeholder="Your bloodGroup" value="<%= data.blood %>" readonly><br><br>
+            <label for="add"><b>Address : </b></label>
+            <input class="input" type="text" id="add" name="add" placeholder="Your address" value="<%= data.add %>"><br><br>
+            <button type="submit"><b>Update</b></button>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Data</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>New Student Entry</h1>
+    <fieldset class="new">
+        <legend><b>(New Student)</b></legend>
+        <form action="/records" method="post" autocomplete="off">
+            <label for="name"><b>Name<sup>*</sup> : </b></label>
+            <input class="input" type="text" id="name" name="name" placeholder="Your fullName" required autofocus><br><br>
+            <label for="fname"><b>Father<sup>*</sup> : </b></label>
+            <input class="input" type="text" id="fname" name="fname" placeholder="Your fatherName" required><br><br>
+            <label for="mail"><b>E-mail<sup>*</sup> : </b></label>
+            <input class="input" type="email" id="mail" name="email" placeholder="Your emailAddress" required><br><br>
+            <label for="clg"><b>Class<sup>*</sup> : </b></label>
+            <input class="input" type="text" id="clg" name="classn" placeholder="Your className" required><br><br>
+            <label for="roll"><b>Rollno<sup>*</sup> : </b></label>
+            <input class="input" type="number" id="roll" name="roll" placeholder="Your rollNo" required><br><br>
+            <label for="dob"><b>DOB<sup>*</sup> : </b></label>
+            <input class="input" type="date" id="dob" name="dob" placeholder="Your dateOfBirth" required><br><br>
+            <label for="dob"><b>Contact<sup>*</sup> : </b></label>
+            <input class="input" type="tel" id="tel" name="phone" maxlength="10" placeholder="Your phoneNumber" required><br><br>
+            <input type="radio" id="male" name="gen" value="Male">
+            <label for="male"><b>Male</b></label>
+            <input type="radio" id="female" name="gen" value="Female">
+            <label for="female"><b>Female</b></label>
+            <input type="radio" id="other" name="gen" value="Other">
+            <label for="other"><b>Other</b></label><br><br>
+            <label for="blood"><b>Blood<sup>*</sup> : </b></label>
+            <input class="input" type="text" id="blood" name="blood" placeholder="Your bloodGroup" required><br><br>
+            <label for="add"><b>Address<sup>*</sup> : </b></label>
+            <input class="input" type="text" id="add" name="add" placeholder="Your address" required><br><br>
+            <button type="submit"><b>Insert</b></button>
+        </form>
+    </fieldset>   
+</body>
+</html>
